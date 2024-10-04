@@ -48,10 +48,6 @@ alias gca='git commit -a'
 
 # -------------------------------- #
 # Directories
-#
-# I put
-# `~/Yandex.Disk.localized/Work/ClientsProjects` for client projects
-# `~/WebsiteDevelopment` for code
 # -------------------------------- #
 
 function cpr() {
@@ -60,6 +56,10 @@ function cpr() {
 
 function wd() {
   cd ~/WebsiteDevelopment
+}
+
+function D() {
+  cd ~/Downloads
 }
 
 function mcd() {
