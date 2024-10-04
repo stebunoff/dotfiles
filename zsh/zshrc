@@ -14,7 +14,7 @@ plugins=(
 
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.oh-my-zsh/custom/plugins/zsh-z/zsh-z.zsh
+source ~/.oh-my-zsh/custom/plugins/zsh-z/zsh-z.plugin.zsh
 
 # Path to oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
