@@ -23,6 +23,7 @@ plugins=(
 export ZSH=$HOME/.oh-my-zsh
 
 alias vi="nvim"
+alias ot="open -a \"Telegram\""
 
 source $ZSH/oh-my-zsh.sh
 
