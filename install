@@ -4,3 +4,6 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Zsh
 ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+
+# Set macOS preferences - we will run this last because this will reload the shell
+source ./.macos
