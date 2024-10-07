@@ -13,5 +13,9 @@ ln -s $DOTFILES/kitty $HOME/.config/kitty
 rm -rf $HOME/.tmux.conf
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
+# Git
+ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
+ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
