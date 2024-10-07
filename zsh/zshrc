@@ -27,6 +27,13 @@ ZSH_THEME="robbyrussell"
 alias vi="nvim"
 alias ot="open -a \"Telegram\""
 
+typeset -U path cdpath fpath
+path=(
+    $HOME/.local/bin
+    $HOME/Code/AssetsAndTemplates/dotfiles/scripts
+    $path
+)
+
 source $ZSH/oh-my-zsh.sh
 
 # -------------------------------- #
@@ -75,6 +82,6 @@ function mcd() {
 alias s="npm run start"
 alias d="npm run dev"
 alias b="npm run build"
-alias t="npm run test"
+#alias t="npm run test"
 alias lint="npm run lint"
 alias lintf="npm run lint --fix"
