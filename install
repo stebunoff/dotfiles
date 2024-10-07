@@ -9,5 +9,9 @@ ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
 rm -rf $HOME/.config/kitty
 ln -s $DOTFILES/kitty $HOME/.config/kitty
 
+# Tmux
+rm -rf $HOME/.tmux.conf
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+
 # Set macOS preferences - we will run this last because this will reload the shell
 source ./.macos
