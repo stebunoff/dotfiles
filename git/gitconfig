@@ -12,6 +12,9 @@
     excludesfile = ~/.gitignore_global
     pager = delta
 
+[diff]
+    tool = vimdiff
+
 [include]
     path = ~/.gitconfig_local
 
