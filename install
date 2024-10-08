@@ -16,7 +16,7 @@ ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 # Scripts
 mkdir -p $HOME/.local/bin
 
-ln -sf $DOTFILES/scripts/t $HOME/.local/bin/t
+ln -sf $DOTFILES/scripts/t $HOME/.local/bin/tmx
 
 # Neovim
 rm -rf $HOME/.config/nvim

@@ -82,6 +82,6 @@ function mcd() {
 alias s="npm run start"
 alias d="npm run dev"
 alias b="npm run build"
-#alias t="npm run test"
+alias t="npm run test"
 alias lint="npm run lint"
 alias lintf="npm run lint --fix"
