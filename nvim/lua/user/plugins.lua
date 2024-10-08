@@ -29,6 +29,70 @@ use('wbthomason/packer.nvim')
 -- Commenting support.
 use('tpope/vim-commentary')
 
+-- Add, change, and delete surrounding text.
+use('tpope/vim-surround')
+
+-- Indent autodetection with editorconfig support.
+use('tpope/vim-sleuth')
+
+-- Allow plugins to enable repeating of commands.
+use('tpope/vim-repeat')
+
+-- Add more languages.
+use('sheerun/vim-polyglot')
+
+-- Jump to the last location when opening a file.
+use('farmergreg/vim-lastplace')
+
+-- Automatically create parent dirs when saving.
+use('jessarcher/vim-heritage')
+
+-- Automatically set the working directory to the project root.
+use({
+  'airblade/vim-rooter',
+  setup = function()
+    -- Instead of this running every time we open a file, we'll just run it once when Vim starts.
+    vim.g.rooter_manual_only = 1
+  end,
+  config = function()
+    vim.cmd('Rooter')
+  end,
+})
+
+-- Automatically add closing brackets, quotes, etc.
+use({
+  'windwp/nvim-autopairs',
+  config = function()
+    require('nvim-autopairs').setup()
+  end,
+})
+
+-- Add smooth scrolling to avoid jarring jumps
+use({
+  'karb94/neoscroll.nvim',
+  config = function()
+    require('neoscroll').setup()
+  end,
+})
+
+-- Split arrays and methods onto multiple lines, or join them back up.
+use({
+  'AndrewRadev/splitjoin.vim',
+  config = function()
+    vim.g.splitjoin_html_attributes_bracket_on_new_line = 1
+    vim.g.splitjoin_trailing_comma = 1
+    vim.g.splitjoin_php_method_chain_full = 1
+  end,
+})
+
+-- Automatically fix indentation when pasting code.
+use({
+  'sickill/vim-pasta',
+  config = function()
+    vim.g.pasta_disabled_filetypes = { 'fugitive' }
+  end,
+})
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then
