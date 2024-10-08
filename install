@@ -13,6 +13,10 @@ ln -s $DOTFILES/kitty $HOME/.config/kitty
 rm -rf $HOME/.tmux.conf
 ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
 
+# Neovim
+rm -rf $HOME/.config/nvim
+ln -s $DOTFILES/nvim $HOME/.config/nvim
+
 # Git
 ln -sf $DOTFILES/git/gitconfig $HOME/.gitconfig
 ln -sf $DOTFILES/git/gitignore_global $HOME/.gitignore_global
