@@ -5,6 +5,9 @@
 # Enable lid wakeup
 sudo pmset -a lidwake 1
 
+# Disable machine sleep while charging
+sudo pmset -c sleep 0
+
 # -------------------------------- #
 # Screen
 # -------------------------------- #
