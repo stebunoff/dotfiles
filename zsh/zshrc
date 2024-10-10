@@ -71,10 +71,13 @@ function D() {
   cd ~/Downloads
 }
 
-function mcd() {
+function mkd() {
   mkdir -p $1 && cd $1
 }
 
+function to() {
+  touch "$@"; vi "$@";
+}
 # -------------------------------- #
 # Node Package Manager
 # -------------------------------- #
