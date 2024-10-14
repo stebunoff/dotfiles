@@ -57,6 +57,9 @@ use('tpope/vim-commentary')
 -- Add, change, and delete surrounding text.
 use('tpope/vim-surround')
 
+-- Pairs of handy bracket mappings, like [b and ]b.
+use('tpope/vim-unimpaired')
+
 -- Indent autodetection with editorconfig support.
 use('tpope/vim-sleuth')
 
