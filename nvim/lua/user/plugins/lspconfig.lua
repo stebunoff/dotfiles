@@ -77,13 +77,13 @@ require('lspconfig').jsonls.setup({
    sources = {
      null_ls.builtins.diagnostics.eslint_d.with({
        condition = function(utils)
-         return utils.root_has_file({ '.eslintrc.js' })
+         return utils.root_has_file({ '.eslintrc.js', 'eslint.config.mjs' })
        end,
      }),
      null_ls.builtins.diagnostics.trail_space.with({ disabled_filetypes = { 'NvimTree' } }),
      null_ls.builtins.formatting.eslint_d.with({
        condition = function(utils)
-         return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json' })
+         return utils.root_has_file({ '.eslintrc.js', '.eslintrc.json', 'eslint.config.mjs' })
        end,
      }),
      null_ls.builtins.formatting.pint.with({
