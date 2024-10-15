@@ -57,6 +57,9 @@ use('tpope/vim-commentary')
 -- Add, change, and delete surrounding text.
 use('tpope/vim-surround')
 
+-- Useful commands like :Rename and :SudoWrite.
+use('tpope/vim-eunuch')
+
 -- Pairs of handy bracket mappings, like [b and ]b.
 use('tpope/vim-unimpaired')
 
