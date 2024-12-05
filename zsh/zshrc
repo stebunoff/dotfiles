@@ -36,6 +36,8 @@ path=(
 
 source $ZSH/oh-my-zsh.sh
 
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+
 # -------------------------------- #
 # Git
 # -------------------------------- #
