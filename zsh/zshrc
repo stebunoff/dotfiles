@@ -3,7 +3,9 @@ export GIT_EDITOR=nvim
 
 HIST_STAMPS="dd/mm/yyyy"
 
-code () { CURSOR_CWD="$PWD" open -n -b "com.todesktop.230313mzl4w4u92" --args $* ;}
+function cursor {
+  open -a "/Applications/Cursor.app" "$@"
+}
 
 # -------------------------------- #
 # Oh My Zsh
