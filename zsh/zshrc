@@ -3,7 +3,7 @@ export GIT_EDITOR=nvim
 
 HIST_STAMPS="dd/mm/yyyy"
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
+code () { CURSOR_CWD="$PWD" open -n -b "com.todesktop.230313mzl4w4u92" --args $* ;}
 
 # -------------------------------- #
 # Oh My Zsh
