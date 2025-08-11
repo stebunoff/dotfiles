@@ -76,6 +76,8 @@ vfs_timeout=60
 ftpfs_directory_timeout=900
 ftpfs_retry_seconds=30
 shell_directory_timeout=900
+editor_external=true
+editor=nvim
 editor_tab_spacing=8
 editor_word_wrap_line_length=72
 editor_option_save_mode=0
@@ -88,7 +90,7 @@ filepos_max_saved_entries=1024
 
 [Layout]
 output_lines=0
-left_panel_size=40
+left_panel_size=52
 top_panel_size=0
 message_visible=true
 keybar_visible=true
