@@ -3,10 +3,6 @@ export GIT_EDITOR=nvim
 
 HIST_STAMPS="dd/mm/yyyy"
 
-function cursor {
-  open -a "/Applications/Cursor.app" "$@"
-}
-
 # -------------------------------- #
 # Oh My Zsh
 # -------------------------------- #
@@ -37,12 +33,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.composer/vendor/bin:$PATH"
 
+# Useful functions
 function cpr() {
   cd ~/Yandex.Disk.localized/Work/ClientsProjects
-}
-
-function wd() {
-  cd ~/WebsiteDevelopment
 }
 
 function D() {
@@ -53,8 +46,8 @@ function mkd() {
   mkdir -p $1 && cd $1
 }
 
-function to() {
-  touch "$@"; vi "$@";
+function cursor {
+  open -a "/Applications/Cursor.app" "$@"
 }
 
 #--------------------------------------------------------------------------
