@@ -174,6 +174,15 @@ use ({
 
 use { 'sindrets/diffview.nvim' }
 
+use ({
+  'NeogitOrg/neogit',
+  requires = {
+    'nvim-lua/plenary.nvim',
+    'sindrets/diffview.nvim',
+    'nvim-telescope/telescope.nvim',
+  },
+  config = function()
+    require('user/plugins/neogit')
   end,
 })
 
