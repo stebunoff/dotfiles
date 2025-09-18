@@ -172,6 +172,8 @@ use ({
 
 
 
+use { 'sindrets/diffview.nvim' }
+
   end,
 })
 
