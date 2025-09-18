@@ -23,6 +23,7 @@ vim.api.nvim_set_hl(0, "NeogitDiffDeleteHighlight", { fg = '#F18CA8', bg = '#443
 vim.api.nvim_set_hl(0, "NeogitDiffAdd", { fg = '#A8E2A3', bg = '#364143'})
 vim.api.nvim_set_hl(0, "NeogitDiffDelete", { fg = '#F18CA8', bg = '#443244' })
 vim.api.nvim_set_hl(0, "NeogitBranch", { fg = '#FFC561', bg = 'NONE' })
+vim.api.nvim_set_hl(0, "NeogitBranchHead", { fg = '#FFC561', bg = 'NONE' })
 vim.api.nvim_set_hl(0, "NeogitChangeAdded", { fg = '#ADDE83', bg = 'NONE' })
 vim.api.nvim_set_hl(0, "NeogitChangeModified", { fg = '#FFC561', bg = 'NONE' })
 vim.api.nvim_set_hl(0, "NeogitChangeDeleted", { fg = '#CB525D', bg = 'NONE' })
