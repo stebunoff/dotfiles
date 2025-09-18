@@ -4,6 +4,17 @@ local function is_tracked(path)
   return vim.v.shell_error == 0
 end
 
+local function refresh_gitsigns_for_current_buffer()
+  local ok, gs = pcall(require, 'gitsigns')
+  if not ok then return end
+
+  -- Wait for index refresh
+  vim.defer_fn(function()
+    pcall(function() gs.attach() end)
+    pcall(vim.cmd, 'Gitsigns refresh')
+  end, 20)
+end
+
 -- intent-to-add (git add -N) for current or picked file
 local function intent_to_add(path)
   path = path or vim.api.nvim_buf_get_name(0)
@@ -12,19 +23,20 @@ local function intent_to_add(path)
     return
   end
 
-  local tracked_before = is_tracked(path)
+  if is_tracked(path) then
+    vim.notify("File already tracked: " .. path, vim.log.levels.INFO)
+    return
+  end
+
   vim.fn.system({ "git", "add", "-N", path })
   local rc = vim.v.shell_error
 
+  refresh_gitsigns_for_current_buffer()
   pcall(function() require("neogit").refresh() end)
 
   if rc == 0 then
-    local tracked_after = is_tracked(path)
-    if not tracked_before and tracked_after then
+    if is_tracked(path) then
       vim.notify("File added to the index (intent-to-add): " .. path, vim.log.levels.INFO)
-    else
-      -- Already tracked or no changes
-      vim.notify("File already tracked: " .. path, vim.log.levels.INFO)
     end
   else
     vim.notify("git add -N failed: " .. path, vim.log.levels.ERROR)
