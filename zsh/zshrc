@@ -63,6 +63,7 @@ function cursor {
 alias vi="nvim"
 alias ot="open -a \"Telegram\""
 alias sail='[ -f sail ] && sail || vendor/bin/sail'
+alias ls="ls -laFh"
 
 # Git
 # Go to project root
