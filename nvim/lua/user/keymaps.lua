@@ -14,9 +14,18 @@ vim.keymap.set('v', '>', '>gv')
 -- http://ddrscott.github.io/blog/2016/yank-without-jank/
 vim.keymap.set('v', 'y', 'myy`y')
 
+-- Paste replace visual selection without copying it
+vim.keymap.set('v', 'p', '"_dP')
+
 -- Easy insertion of a trailing ; or , from insert mode.
 vim.keymap.set('i', ';;', '<Esc>A;')
 vim.keymap.set('i', ',,', '<Esc>A,')
+
+-- Clear search highlighting
+vim.keymap.set('n', '<Leader>k', ':nohlsearch<CR>')
+
+-- Open the current file in the default program for macOS
+vim.keymap.set('n', '<Leader>x', ':!open %<CR><CR>')
 
 -- Move text up and down
 -- Use British keyboard on macOS
