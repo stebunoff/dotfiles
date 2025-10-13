@@ -1,6 +1,5 @@
 local separator = { '"▏"', color = 'StatusLineNonText' }
-require('lualine').setup({
-  options = {
+require('lualine').setup({ options = {
     section_separators = '',
     component_separators = '',
     globalstatus = true,
@@ -21,7 +20,7 @@ require('lualine').setup({
       'branch',
       'diff',
       separator,
-      '"\u{f1b3}  " .. tostring(#vim.tbl_keys(vim.lsp.buf_get_clients()))',
+      '"\u{f1b3}  " .. tostring(#vim.tbl_keys(vim.lsp.get_clients()))',
       { 'diagnostics', sources = { 'nvim_diagnostic' } },
       separator,
     },
