@@ -58,6 +58,9 @@ use('sheerun/vim-polyglot')
 -- Jump to the last location when opening a file.
 use('farmergreg/vim-lastplace')
 
+-- Enable * searching with visually selected text
+use('nelstrom/vim-visual-star-search')
+
 -- Automatically create parent dirs when saving.
 use('jessarcher/vim-heritage')
 
