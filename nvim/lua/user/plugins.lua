@@ -91,14 +91,6 @@ use({
   end,
 })
 
--- Add smooth scrolling to avoid jarring jumps
-use({
-  'karb94/neoscroll.nvim',
-  config = function()
-    require('neoscroll').setup()
-  end,
-})
-
 -- Split arrays and methods onto multiple lines, or join them back up.
 use({
   'AndrewRadev/splitjoin.vim',
