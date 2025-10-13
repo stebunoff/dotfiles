@@ -226,12 +226,23 @@ use({
   requires = {
     'williamboman/mason.nvim',
     'williamboman/mason-lspconfig.nvim',
-    'b0o/schemastore.nvim',
-    { 'jose-elias-alvarez/null-ls.nvim', dependencies = 'nvim-lua/plenary.nvim' },
-    'jayp0521/mason-null-ls.nvim',
+    'jay-babu/mason-null-ls.nvim',
+    'b0o/schemastore.nvim'
   },
   config = function()
     require('user/plugins/lspconfig')
+  end,
+})
+use({ 'b0o/schemastore.nvim' })
+
+use({
+  "nvimtools/none-ls.nvim",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvimtools/none-ls-extras.nvim",
+  },
+  config = function()
+    require("user/plugins/none-ls")
   end,
 })
 
