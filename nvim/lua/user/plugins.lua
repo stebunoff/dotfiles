@@ -64,6 +64,13 @@ use('nelstrom/vim-visual-star-search')
 -- Automatically create parent dirs when saving.
 use('jessarcher/vim-heritage')
 
+-- Text objects for HTML attributes
+use({
+    'whatyouhide/vim-textobj-xmlattr',
+    requires = 'kana/vim-textobj-user'
+  })
+
+
 -- Automatically set the working directory to the project root.
 use({
   'airblade/vim-rooter',
