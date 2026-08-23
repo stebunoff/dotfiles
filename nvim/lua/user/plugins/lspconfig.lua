@@ -89,7 +89,17 @@ vim.keymap.set('n', 'gi', ':Telescope lsp_implementations<CR>')
 vim.keymap.set('n', 'gr', ':Telescope lsp_references<CR>')
 vim.keymap.set('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>')
 vim.keymap.set('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>')
-vim.keymap.set('n', 'fo', '<cmd>lua vim.lsp.buf.format()<CR>')
+vim.keymap.set("n", "fo", function()
+vim.lsp.buf.format({
+  filter = function(client)
+    if vim.bo.filetype == "fsharp" then
+      return client.name == "null-ls"
+    end
+
+    return true
+  end,
+})
+end)
 
 -- Diagnostic configuration
 vim.diagnostic.config({
