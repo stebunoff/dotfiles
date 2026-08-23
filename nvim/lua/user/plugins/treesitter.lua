@@ -1,6 +1,16 @@
 require("nvim-treesitter.configs").setup({
-  ensure_installed = "all",
-  ignore_install = { "ipkg" },
+  ignore_install = {},
+  ensure_installed = {
+    "lua",
+    "javascript",
+    "typescript",
+    "html",
+    "css",
+    "json",
+    "python",
+    "php",
+    "fsharp",
+  },
 
   modules = {},
   sync_install = false,
