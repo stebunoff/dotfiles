@@ -1,5 +1,15 @@
 local separator = { '"▏"', color = 'StatusLineNonText' }
-require('lualine').setup({ options = {
+
+local filetype_names = {
+  fsharp = "F#",
+}
+
+local function format_filetype(name)
+  return filetype_names[name] or name
+end
+
+require('lualine').setup({
+  options = {
     section_separators = '',
     component_separators = '',
     globalstatus = true,
@@ -28,7 +38,10 @@ require('lualine').setup({ options = {
       'filename'
     },
     lualine_x = {
-      'filetype',
+      {
+        "filetype",
+        fmt = format_filetype,
+      },
       'encoding',
       'fileformat',
     },
