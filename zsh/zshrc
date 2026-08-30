@@ -80,7 +80,9 @@ setopt correctall
 setopt menucomplete
 zstyle ':completion:*' menu select=1 _complete _ignored _approximate
 
+#--------------------------------------------------------------------------
 # Useful functions
+#--------------------------------------------------------------------------
 function cpr() {
   cd ~/Yandex.Disk.localized/Work/ClientsProjects
 }
