@@ -112,10 +112,3 @@ alias grt='cd "$(git rev-parse --show-toplevel)"'
 alias gs='git status'
 alias gA='git add -A'
 alias gc='git commit'
-
-# Node Package Manager
-alias s="npm run start"
-alias d="npm run dev"
-alias b="npm run build"
-alias t="npm run test"
-alias lint="npx eslint"
