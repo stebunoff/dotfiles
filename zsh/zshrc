@@ -3,6 +3,8 @@ export GIT_EDITOR=nvim
 
 HIST_STAMPS="dd/mm/yyyy"
 
+[ -f ~/.config/secrets/env ] && source ~/.config/secrets/env
+
 # -------------------------------- #
 # Oh My Zsh
 # -------------------------------- #
@@ -16,10 +18,12 @@ plugins=(
 )
 eval "$(zoxide init zsh)"
 
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="my"
 
 # Paths
 export ZSH=$HOME/.oh-my-zsh
+export PATH="$PATH:$HOME/.dotnet/tools"
 
 typeset -U path cdpath fpath
 path=(
@@ -28,6 +32,7 @@ path=(
     $path
 )
 
+zstyle ':omz:alpha:lib:git' async-prompt no
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.composer/vendor/bin:$PATH"

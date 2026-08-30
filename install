@@ -4,6 +4,7 @@ DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 # Zsh
 ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+ln -sf $DOTFILES/zsh/my.zsh-theme $HOME/.oh-my-zsh/themes/my.zsh-theme
 
 # Kitty
 rm -rf $HOME/.config/kitty
